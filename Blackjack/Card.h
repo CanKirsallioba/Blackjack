@@ -1,30 +1,23 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 using namespace std;
 
-enum Suit {
-	spade, club, diamond, heart
-};
 
 class Card {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+	Card(string suit, int number);
+	Card(Card& cardToCopy);
+	~Card();
+	void operator= (const Card& right);
+	string getSuit() const;
+	int getNumber() const;
+	void printCard();
+	//no need for mutator functions
 
 private:
-	Suit suit;
+	string suit;
 	int number;
 
 };
